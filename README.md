@@ -17,6 +17,5 @@ Task App is a straightforward web application to manage your tasks and to-do lis
 - **Backend**: Node.js and Express (for RESTful API)
 - **Database**: MongoDB (for storing tasks and their status)
 
-## Getting Started
 
 
