@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getAllTodos = (setTodos, filter) => {
   axios
-    .get("http://localhost:4000/api/todos", { params: { filter: filter } })
+    .get("https://task-list-app-nine.vercel.app/api/todos", { params: { filter: filter } })
     .then((res) => {
       const apiRes = res.data;
 
@@ -15,7 +15,7 @@ export const getAllTodos = (setTodos, filter) => {
 
 export const addTodo = (description) => {
   axios
-    .post("http://localhost:4000/api/todos", { description })
+    .post("https://task-list-app-nine.vercel.app/api/todos", { description })
     .then((res) => {
       console.log(res);
     })
@@ -25,7 +25,7 @@ export const addTodo = (description) => {
 };
 export const deleteTodo = (id) => {
   axios
-    .delete(`http://localhost:4000/api/todos/${id}`)
+    .delete(`https://task-list-app-nine.vercel.app/api/todos/${id}`)
     .then((res) => console.log(res))
     .catch((e) => {
       console.log(e);
@@ -34,7 +34,7 @@ export const deleteTodo = (id) => {
 
 export const updateTodo = (id, description) => {
   axios
-    .patch(`http://localhost:4000/api/todos/${id}`, {
+    .patch(`https://task-list-app-nine.vercel.app/api/todos/${id}`, {
       completed: true,
     })
     .then((res) => console.log(res))
@@ -44,7 +44,7 @@ export const updateTodo = (id, description) => {
 };
 export const updateTextTodo = (id, description) => {
   axios
-    .patch(`http://localhost:4000/api/todos/${id}`, {
+    .patch(`https://task-list-app-nine.vercel.app/api/todos/${id}`, {
       description: description,
     })
     .then((res) => console.log(res))
